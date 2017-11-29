@@ -49,14 +49,23 @@ class AdventCalendar
      */
     public function validateEntry($entry)
     {
-        if (!array_key_exists('unlockDate', $entry) ||
-            !array_key_exists('positionTop', $entry) ||
-            !array_key_exists('positionLeft', $entry) ||
-            (!array_key_exists('doorImageLeft', $entry) && !array_key_exists('doorImageRight', $entry)) ||
-            !array_key_exists('url', $entry)
-        ) {
+        $arrayKeys = array(
+            'unlockDate',
+            'positionTop',
+            'positionLeft',
+            'url'
+        );
+
+        foreach ($arrayKeys as $arrayKey) {
+            if (!array_key_exists($arrayKey, $entry)) {
+                return false;
+            }
+        }
+
+        if (!array_key_exists('doorImageLeft', $entry) && !array_key_exists('doorImageRight', $entry)) {
             return false;
         }
+
         return true;
     }
 
