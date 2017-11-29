@@ -137,7 +137,7 @@ class AdventCalendar
         }
 
         // wrap elements
-        $output .= '<div class="advent-calendar" ' .
+        $output = '<div class="advent-calendar" ' .
             'style="width:' . $this->calendarWidth . 'px;height:' . $this->calendarHeight . 'px;">' .
             $output .
             '</div>';

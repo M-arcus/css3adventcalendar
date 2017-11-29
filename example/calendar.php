@@ -18,7 +18,7 @@ require '../AdventCalendar.php';
 $config = file_get_contents('./calendar.json');
 $calendar = new AdventCalendar();
 $calendar->loadFromJson($config);
-$calendar->render();
+$calendar->render(true);
 ?>
 </body>
 </html>
