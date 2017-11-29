@@ -78,10 +78,10 @@ class AdventCalendar
     /**
      * Renders the HTML for the calendar.
      *
-     * @param boolean $return if set to TRUE, returns the output rather than print it.
+     * @param boolean $printOutput if set to TRUE, print output
      * @return string
      */
-    public function render($return = false)
+    public function render($printOutput = false)
     {
         $now = time();
         $output = '';
@@ -133,11 +133,10 @@ class AdventCalendar
             $output .
             '</div>';
 
-        if ($return) {
-            return $output;
+        if ($printOutput) {
+            echo $output;
         }
 
-        echo $output;
-        return true;
+        return $output;
     }
 }
