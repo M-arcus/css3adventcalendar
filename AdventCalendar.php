@@ -96,7 +96,7 @@ class AdventCalendar
         $output = '';
 
         foreach ($this->entries as $entry) {
-            if ($entry['doorImageLeft'] && $entry['doorImageRight']) {
+            if (!empty($entry['doorImageLeft']) && !empty($entry['doorImageRight'])) {
                 $totalWidth = $entry['doorWidth'] * 2;
             } else {
                 $totalWidth = $entry['doorWidth'];
@@ -105,16 +105,16 @@ class AdventCalendar
                 $output .= '<a href="' . $entry['url'] .
                     '" class="advent-calendar-entry" style="width:' . $totalWidth .
                     'px;top:' . $entry['positionTop'] . 'px;left:' . $entry['positionLeft'] . 'px;">';
-                if ($entry['backgroundImage']) {
+                if (!empty($entry['backgroundImage'])) {
                     $output .= '<img class="advent-calendar-background" src="' .
                         $entry['backgroundImage'] . '" alt="" />';
                 }
-                if ($entry['doorImageLeft']) {
+                if (!empty($entry['doorImageLeft'])) {
                     $output .= '<div class="advent-calendar-door-left-wrapper">' .
                         '<img class="advent-calendar-door" src="' . $entry['doorImageLeft'] . '" alt="" />' .
                         '</div>';
                 }
-                if ($entry['doorImageRight']) {
+                if (!empty($entry['doorImageRight'])) {
                     $output .= '<div class="advent-calendar-door-right-wrapper">' .
                         '<img class="advent-calendar-door" src="' . $entry['doorImageRight'] . '" alt="" /></div>';
                 }
@@ -124,11 +124,11 @@ class AdventCalendar
                     'style="width:' . $totalWidth . 'px;' .
                     'top:' . $entry['positionTop'] . 'px;' .
                     'left:' . $entry['positionLeft'] . 'px;">';
-                if ($entry['doorImageLeft']) {
+                if (!empty($entry['doorImageLeft'])) {
                     $output .= '<div class="advent-calendar-door-left-wrapper">' .
                         '<img class="advent-calendar-door" src="' . $entry['doorImageLeft'] . '" alt="" /></div>';
                 }
-                if ($entry['doorImageRight']) {
+                if (!empty($entry['doorImageRight'])) {
                     $output .= '<div class="advent-calendar-door-right-wrapper">' .
                         '<img class="advent-calendar-door" src="' . $entry['doorImageRight'] . '" alt="" /></div>';
                 }
