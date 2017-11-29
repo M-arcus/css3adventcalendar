@@ -6,7 +6,7 @@ This is a small project that aims to help creating HTML-based advent calendars. 
 
 ## Example
 
-[Example Screenshot](example/screenshot.png)
+![Example](example/screenshot.png)
 
 [The images used in the example calendar belong to Pelfusion. See their license statement for more details.](http://pelfusion.com/35-new-free-long-shadow-christmas-icons/)
 
